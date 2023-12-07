@@ -1,0 +1,10 @@
+-----------------------------------------------------------------
+--------------------Run Kafka------------------------------------
+cd C:\Kafka\kafka\bin\windows
+
+#Start zookeeper :
+zookeeper-server-start.bat ..\..\config\zookeeper.properties
+
+#start kafka :
+kafka-server-start.bat ..\..\config\server.properties
+-----------------------------------------------------------------

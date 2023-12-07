@@ -8,9 +8,9 @@ limiter = Limiter(get_remote_address, app=app, default_limits=["100000 per day",
 
 def read_data_files():
     # Read data from CSV files and return DataFrames
-    u_data = pd.read_csv('C:/Users/Youcode/Desktop/8 Months/sprint 4/sixth week_Recommandation de Films Jay-Z Entertainment  Intégration de Big Data et IA/api/data/u.data', sep='\t', names=['userId', 'movieId', 'rating', 'timestamp'])
-    u_item = pd.read_csv('C:/Users/Youcode/Desktop/8 Months/sprint 4/sixth week_Recommandation de Films Jay-Z Entertainment  Intégration de Big Data et IA/api/data/u.item', sep='|', encoding='latin-1', header=None, names=['movieId', 'title', 'release_date', 'video_release_date', 'IMDb_URL', 'unknown', 'Action', 'Adventure', 'Animation', 'Children', 'Comedy', 'Crime', 'Documentary', 'Drama', 'Fantasy', 'Film-Noir', 'Horror', 'Musical', 'Mystery', 'Romance', 'Sci-Fi', 'Thriller', 'War', 'Western'])
-    u_user = pd.read_csv('C:/Users/Youcode/Desktop/8 Months/sprint 4/sixth week_Recommandation de Films Jay-Z Entertainment  Intégration de Big Data et IA/api/data/u.user', sep='|', names=['userId', 'age', 'gender', 'occupation', 'zipcode'])
+    u_data = pd.read_csv('C:/Users/Youcode/Desktop/8 Months/sprint 4/sixth week_Recommandation_de_Films_Big_Data_et_IA/api/data/u.data', sep='\t', names=['userId', 'movieId', 'rating', 'timestamp'])
+    u_item = pd.read_csv('C:/Users/Youcode/Desktop/8 Months/sprint 4/sixth week_Recommandation_de_Films_Big_Data_et_IA/api/data/u.item', sep='|', encoding='latin-1', header=None, names=['movieId', 'title', 'release_date', 'video_release_date', 'IMDb_URL', 'unknown', 'Action', 'Adventure', 'Animation', 'Children', 'Comedy', 'Crime', 'Documentary', 'Drama', 'Fantasy', 'Film-Noir', 'Horror', 'Musical', 'Mystery', 'Romance', 'Sci-Fi', 'Thriller', 'War', 'Western'])
+    u_user = pd.read_csv('C:/Users/Youcode/Desktop/8 Months/sprint 4/sixth week_Recommandation_de_Films_Big_Data_et_IA/api/data/u.user', sep='|', names=['userId', 'age', 'gender', 'occupation', 'zipcode'])
     return u_data, u_item, u_user
 
 def extract_genres(row):

@@ -24,10 +24,14 @@ def create_modified_json_entry(row):
     movie_info = {
         "movieId": str(row['movieId']),
         "title": row['title'],
+        "release_date": row['release_date'],
         "genres": row['genres']
     }
     return {
         "userId": str(row['userId']),
+        "age": str(row['age']),
+        "gender": str(row['gender']),
+        "occupation": str(row['occupation']),
         "movie": movie_info,
         "rating": str(row['rating']),
         "timestamp": str(row['timestamp'])
@@ -46,7 +50,7 @@ def get_movie_data(page_number):
 
     u_item['genres'] = u_item.apply(extract_genres, axis=1)
 
-    merged_data = pd.merge(u_data, u_item[['movieId', 'title', 'genres']], on='movieId')
+    merged_data = pd.merge(u_data, u_item[['movieId', 'title', 'release_date', 'genres']], on='movieId')
     merged_data = pd.merge(merged_data, u_user[['userId', 'age', 'gender', 'occupation']], on='userId')
 
     total_items = len(merged_data)

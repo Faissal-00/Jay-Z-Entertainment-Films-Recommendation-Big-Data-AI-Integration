@@ -8,3 +8,14 @@ zookeeper-server-start.bat ..\..\config\zookeeper.properties
 #start kafka :
 kafka-server-start.bat ..\..\config\server.properties
 -----------------------------------------------------------------
+
+
+--------------------Run ElasticSearch/Kibana---------------------
+C:\ElasticStack\elasticsearch-7.17.14\bin
+    elasticsearch.bat
+-----------------------------------------------------------------
+
+
+--------------------Run Kibana---------------------
+C:\ElasticStack\kibana-7.17.14\bin
+    kibana.bat

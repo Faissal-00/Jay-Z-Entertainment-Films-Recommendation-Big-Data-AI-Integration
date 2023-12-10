@@ -23,7 +23,7 @@ def fetch_data_and_produce(page_number):
                 producer.flush()
                 movie = item["movie"]["movieId"]
                 print(f"{movie} sent to Kafka from Page {page_number}")
-                time.sleep(10)
+                time.sleep(2)
             return True
         else:
             print("No more data available.")

@@ -10,12 +10,19 @@ kafka-server-start.bat ..\..\config\server.properties
 -----------------------------------------------------------------
 
 
---------------------Run ElasticSearch/Kibana---------------------
-C:\ElasticStack\elasticsearch-7.17.14\bin
+--------------------Run ElasticSearch---------------------
+cd C:\ElasticStack\elasticsearch-7.17.14\bin
     elasticsearch.bat
+
+#Access elasticsearch :
+http://locahost:9200/
 -----------------------------------------------------------------
 
 
---------------------Run Kibana---------------------
-C:\ElasticStack\kibana-7.17.14\bin
+--------------------Run Kibana-----------------------------------
+cd C:\ElasticStack\kibana-7.17.14\bin
     kibana.bat
+
+#Access kibana :
+http://localhost:5601/app/home#/  
+-----------------------------------------------------------------    

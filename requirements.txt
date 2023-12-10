@@ -1,0 +1,1 @@
+install Kafka, Spark, Elasticsearch and Kibana in your laptop 
